@@ -13,7 +13,7 @@ if (isset($_GET['id']) && $_GET['id'] != null) {
 }
 ?>
 <div class="container style-form">
-    <h3><b>Datos del Estudiante # <?php echo $_GET['id']; ?><b></h3>
+    <h3><b>Datos de la Mascota # <?php echo $_GET['id']; ?><b></h3>
     <br>
     <div class="row">
         <div class="col-md-3"></div>

@@ -26,7 +26,7 @@ if (isset($_POST['btnEditar'])) {
         $_POST['txtPeso'],
         $_POST['txtRazon'],
         $_GET['id']
-    ) ;
+    );
 
     //si actualizo correctamente devuelve un verdadero(true);
     if ($update == true) {
@@ -82,7 +82,7 @@ if (isset($_POST['btnEditar'])) {
             <div class="col-md-6">
 
 
-            <div class="form-group">
+                <div class="form-group">
                     <label for="txtNombre" class="control-label col-md-3">Nombre:</label>
                     <div class="col-md-9">
                         <input type="text" name="txtNombre" id="" class="form-control" required value="<?php echo $row['Nombre']; ?>">
@@ -108,13 +108,13 @@ if (isset($_POST['btnEditar'])) {
 
                     <div class="d-flex flex-row m-2 ">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="txtSexo" id="flexRadioMacho" value="Macho" required <?php if ($row['Sexo'] == 'Macho') {?> checked <?php } ?> >
+                            <input class="form-check-input" type="radio" name="txtSexo" id="flexRadioMacho" value="Macho" required <?php if ($row['Sexo'] == 'Macho') { ?> checked <?php } ?>>
                             <label class="form-check-label" for="txtSexo">
                                 Macho
                             </label>
                         </div>
                         <div class="form-check ms-3">
-                            <input class="form-check-input" type="radio" name="txtSexo" id="flexRadioHembra" value="Hembra"  <?php if ($row['Sexo'] == 'Hembra') {?> checked <?php } ?> >
+                            <input class="form-check-input" type="radio" name="txtSexo" id="flexRadioHembra" value="Hembra" <?php if ($row['Sexo'] == 'Hembra') { ?> checked <?php } ?>>
                             <label class="form-check-label" for="txtSexo">
                                 Hembra
                             </label>
@@ -132,21 +132,21 @@ if (isset($_POST['btnEditar'])) {
                 </div>
 
                 <div class="form-group col-md-9">
-                <label for="txtRazon" class="control-label col-md-3">Razon:</label>
+                    <label for="txtRazon" class="control-label col-md-3">Razon:</label>
                     <select class="form-select" name="txtRazon" required>
                         <option>Abrir este menú de selección</option>
-                        <option <?php if ($row['Razon'] == '1') {?> selected <?php } ?> value="1">Vacunación</option>
-                        <option <?php if ($row['Razon'] == '2') {?> selected <?php } ?> value="2">Cirugía</option>
-                        <option <?php if ($row['Razon'] == '3') {?> selected <?php } ?> value="3">Radiografías</option>
-                        <option <?php if ($row['Razon'] == '4') {?> selected <?php } ?> value="4">Análisis de laboratorio</option>
-                        <option <?php if ($row['Razon'] == '5') {?> selected <?php } ?> value="5">Tratamiento de enfermedades</option>
-                        <option <?php if ($row['Razon'] == '6') {?> selected <?php } ?> value="6">Cuidado dental</option>
-                        <option <?php if ($row['Razon'] == '7') {?> selected <?php } ?> value="7">Esterilización y castración</option>
-                        <option <?php if ($row['Razon'] == '8') {?> selected <?php } ?> value="8">Hospitalización</option>
-                        <option <?php if ($row['Razon'] == '9') {?> selected <?php } ?> value="9">Urgencias veterinarias</option>
-                        <option <?php if ($row['Razon'] == '10') {?> selected <?php } ?> value="10">Control de parásitos</option>
-                        <option <?php if ($row['Razon'] == '11') {?> selected <?php } ?> value="11">Nutrición y dietas especializadas</option>
-                        <option <?php if ($row['Razon'] == '12') {?> selected <?php } ?> value="12">MicroChip</option>
+                        <option <?php if ($row['Razon'] == '1') { ?> selected <?php } ?> value="1">Vacunación</option>
+                        <option <?php if ($row['Razon'] == '2') { ?> selected <?php } ?> value="2">Cirugía</option>
+                        <option <?php if ($row['Razon'] == '3') { ?> selected <?php } ?> value="3">Radiografías</option>
+                        <option <?php if ($row['Razon'] == '4') { ?> selected <?php } ?> value="4">Análisis de laboratorio</option>
+                        <option <?php if ($row['Razon'] == '5') { ?> selected <?php } ?> value="5">Tratamiento de enfermedades</option>
+                        <option <?php if ($row['Razon'] == '6') { ?> selected <?php } ?> value="6">Cuidado dental</option>
+                        <option <?php if ($row['Razon'] == '7') { ?> selected <?php } ?> value="7">Esterilización y castración</option>
+                        <option <?php if ($row['Razon'] == '8') { ?> selected <?php } ?> value="8">Hospitalización</option>
+                        <option <?php if ($row['Razon'] == '9') { ?> selected <?php } ?> value="9">Urgencias veterinarias</option>
+                        <option <?php if ($row['Razon'] == '10') { ?> selected <?php } ?> value="10">Control de parásitos</option>
+                        <option <?php if ($row['Razon'] == '11') { ?> selected <?php } ?> value="11">Nutrición y dietas especializadas</option>
+                        <option <?php if ($row['Razon'] == '12') { ?> selected <?php } ?> value="12">MicroChip</option>
                     </select>
                 </div>
 
@@ -158,9 +158,17 @@ if (isset($_POST['btnEditar'])) {
                     </div>
                 </div>
 
-                <div class="form-group" align="right" style="margin-right: 1%;">
-                    <input type="submit" value="Guardar" class="btn btn-primary btn-md" name="btnRegistrar">
+                <div class="d-flex flex-row-reverse mt-2">
+                    <div class="form-group" align="right" style="margin-right: 1%;">
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-md" name="btnEditar">
+                    </div>
+                    <div class="form-group" align="right" style="margin-right: 1%;">
+                        <a href="?load=inicio">
+                        <input type="button" value="Salir" class="btn btn-danger btn-md" name="btnSalir">
+                        </a>
+                    </div>
                 </div>
+
 
 
             </div>

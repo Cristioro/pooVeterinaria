@@ -75,8 +75,9 @@ class Estudiante
     //Crear metodo actualizar estudiante
     public function editarEstudiante()
     {
+        print_r($this);
         //consulta db para actualizar datos del estudiante
-        $sql = "UPDATE Mascotas SET NombreDueño = '{$this->NombreDueño}', ApellidoDueño = '{$this->ApellidoDueño}'
+        $sql = "UPDATE mascotas SET NombreDueño = '{$this->NombreDueño}', ApellidoDueño = '{$this->ApellidoDueño}'
         , Telefono = '{$this->Telefono}',  Nombre = '{$this->Nombre}' ,  Especie = '{$this->Especie}',  Raza = '{$this->Raza}',  Sexo = '{$this->Sexo}',  Edad = '{$this->Edad}',  Peso = '{$this->Peso}',  Razon = '{$this->Razon}',  Fecha = '{$this->Fecha}' WHERE IdMascota = '{$this->IdMascota}'";
         //Ejecutar la consulta de actualizar
         $this->conexion->consultaSimple($sql);
@@ -87,7 +88,7 @@ class Estudiante
     public function eliminarEstudiante()
     {
         //consulta db para eliminar datos del estudiante
-        $sql = "DELETE FROM Mascotas WHERE IdMascota = '{$this->IdMascota}'";
+        $sql = "DELETE FROM mascotas WHERE IdMascota = '{$this->IdMascota}'";
         //ejecutar la consulta con la conexion
         $this->conexion->consultaSimple($sql);
         return true;

@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mi primer CRUD en PHP</title>
+    <title>DB Veterinaria Recocha</title>
     <link rel="stylesheet" href="Libs/CSS/index.css">
     <!--Libreria de bootstrap para diseños de formularios-->
     <link rel="stylesheet" href="Libs/CSS/bootstrap.min.css">
@@ -26,7 +26,7 @@
 <body>
     <div class="tituloIndex">
         <header>
-            Bienvenidos a todos los estudiantes de Desarrollo de Software
+            Veterinaria Recocha
         </header>
 
     </div>
